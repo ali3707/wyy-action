@@ -1,4 +1,5 @@
 import requests,base64,json,hashlib
+import urllib2
 from Crypto.Cipher import AES
 def encrypt(key, text):
     cryptor = AES.new(key.encode('utf8'), AES.MODE_CBC, b'0102030405060708')
@@ -101,6 +102,7 @@ postdata={
 res=s.post(url,protect(json.dumps(postdata)))
 object=json.loads(res.text,strict=False)
 if object['code']==200:
+    strHtml = urllib2.urlopen('https://sc.ftqq.com/[SCKEY(SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee)].send?text=我要发送通知啦').read()
     print("刷单成功！共"+str(count)+"首")
     exit()
 else:
