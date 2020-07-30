@@ -104,8 +104,6 @@ object=json.loads(res.text,strict=False)
 if object['code']==200:
    
     resp=urllib.request.urlopen('https://sc.ftqq.com/[SCKEY(SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee)].send?text=网易云签到成功')
-    html=resp.read()
-    print(html)
     print("刷单成功！共"+str(count)+"首")
     exit()
 else:
