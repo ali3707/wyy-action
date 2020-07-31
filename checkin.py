@@ -103,7 +103,7 @@ res=s.post(url,protect(json.dumps(postdata)))
 object=json.loads(res.text,strict=False)
 if object['code']==200:
     print("刷单成功！共"+str(count)+"首")
-    acc="https://sc.ftqq.com/[SCKEY(SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee)].send?text=wyy"
+    acc="https://sc.ftqq.com/SCKEY(SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee.send?text=wyy"
     req=urllib.request.Request(acc)
     exit()
 else:
