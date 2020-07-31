@@ -100,11 +100,24 @@ postdata={
     "logs":json.dumps(buffer)
 }
 res=s.post(url,protect(json.dumps(postdata)))
+
+api= " https://sc.ftqq.com/SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee.send"
+title = "紧急通知"
+
+content = "这是程序发的信息，请查收"
+
+data = {
+
+"text":title,
+
+"desp":content
+
+}
+
 object=json.loads(res.text,strict=False)
 if object['code']==200:
     print("刷单成功！共"+str(count)+"首")
-    acc="https://sc.ftqq.com/SCKEY(SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee.send?text=wyy"
-    req=urllib.request.Request(acc)
+    req = requests.post(api,data = data)
     exit()
 else:
     print("发生错误："+str(object['code'])+object['message'])
