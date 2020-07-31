@@ -101,7 +101,7 @@ postdata={
 }
 res=s.post(url,protect(json.dumps(postdata)))
 
-api= " https://sc.ftqq.com/SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee.send"
+api= " https://sc.ftqq.com/SCU102935T1fa6eb66e1fd5e1ad173c4a1c2c71be15ef7438defdee.send?"
 title = "wyy"
 
 content = "wyy"
